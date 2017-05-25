@@ -57,9 +57,9 @@ class Business: NSObject {
         
         fullDict = dictionary 
         
-        let urlString = dictionary["url"] as! String
+        let urlString = dictionary["url"] as? String
         if urlString != nil {
-            url = URL(string: urlString)
+            url = URL(string: urlString!)
         } else {
             url = nil
         }

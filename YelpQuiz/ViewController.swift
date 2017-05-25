@@ -53,9 +53,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     //func that adds new POI based on coordinates
     func updatePointOfInterest(latitude: Double,longitude:Double) {
-        //latitude: 40.718247, longitude: -73.906581
         Business.searchWithLocation(latitude: latitude, longitude: longitude) { (businesses: [Business]?, error: Error?) -> Void in
-            let mapView = self.view as! GMSMapView
             self.businesses = businesses
             if let businesses = businesses {
                 for business in businesses {
