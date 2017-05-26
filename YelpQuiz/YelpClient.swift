@@ -44,7 +44,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
     
     
     func searchWithLocation(latitude: Double, longitude: Double, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
-        let parameters: [String : AnyObject] = ["limit": 39 as AnyObject,"sort": 1 as AnyObject,"radius_filter": 10000 as AnyObject,"ll": "\(latitude),\(longitude)" as AnyObject]
+        let parameters: [String : AnyObject] = ["category_filter": "food" as AnyObject, "limit": 39 as AnyObject,"sort": 1 as AnyObject,"radius_filter": 10000 as AnyObject,"ll": "\(latitude),\(longitude)" as AnyObject]
                 
         print(parameters)
         
